@@ -1,21 +1,20 @@
-const Example = require('../models/exampleModel.js');
+const College = require("../models/exampleModel.js");
+const ErrorHandler = require("../utils/ErrorHandler.js");
 
 // Controller methods
-exports.getExamples = async (req, res) => {
-  try {
-    const examples = await Example.create(req.body);
-    res.json(examples);
-  } catch (err) {
-    res.status(500).json({ message: 'Server Error' });
+exports.getCollege = async (req, res, next) => {
+  const colleges = await College.find();
+  if (!colleges) {
+    return next(new ErrorHandler("No Colleges to show", 400));
   }
+
+  res.status(200).json({ success: true, colleges: colleges });
 };
 
-exports.createExample = async (req, res) => {
-  try {
-    const newExample = new Example(req.body);
-    await newExample.save();
-    res.json(newExample);
-  } catch (err) {
-    res.status(500).json({ message: 'Server Error' });
+exports.createCollege = async (req, res) => {
+  const college = await College.create(req.body);
+  if (!college) {
+    return next(new ErrorHandler("Internal Server Error occured"), 400);
   }
+  res.status(200).json({ success: true, college: college });
 };

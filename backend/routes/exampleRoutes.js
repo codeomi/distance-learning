@@ -6,7 +6,7 @@ const {
 
 const router = express.Router();
 // API routes
-router.get("/", getExamples);
+router.get("/allcolleges", getColleges);
 router.post("/create", createExample);
 
 module.exports = router;
