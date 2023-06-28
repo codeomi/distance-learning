@@ -1,0 +1,92 @@
+@import "../styles/variables.scss";
+
+.section1{
+    @include section;
+   background: url("https://simplidistance.com/wp-content/uploads/2022/07/home-image.jpg");
+   background-size: cover;
+   color: $white;
+    
+}
+
+.section-container{
+    @include section-container;
+    width: 850px
+
+}
+
+.section-description{
+    margin-bottom: 35px;
+}
+
+.heading-1{
+    @include heading-1;
+    text-align: center;
+    color: $dull-white;
+   
+    
+}
+
+.para-container{
+    @include para;
+    width: 800px;
+    text-align: center;
+
+}
+
+.search-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggle-container{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+.toggle-container{
+    width: fit-content;
+    padding: 2px;
+    background-color: $darkblue;
+    border-radius: 140px;
+}
+.toggle-btn{
+    width: 335/2 px;
+    height: 57px;
+    padding: 0 15px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $darkblue;
+    border-radius: 140px;
+    font-size: 19px;
+    color: $white;
+    
+}
+
+.toggle-btn-active{
+    background-color: $white;
+    color: $darkblue;
+}
+
+.search-bar{
+    background: radial-gradient(circle at 100% 100%, #ffffff 0, #ffffff 3px, transparent 3px) 0% 0%/8px 8px no-repeat,
+            radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 3px, transparent 3px) 100% 0%/8px 8px no-repeat,
+            radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 3px, transparent 3px) 0% 100%/8px 8px no-repeat,
+            radial-gradient(circle at 0 0, #ffffff 0, #ffffff 3px, transparent 3px) 100% 100%/8px 8px no-repeat,
+            linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 10px) calc(100% - 16px) no-repeat,
+            linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 16px) calc(100% - 10px) no-repeat,
+            linear-gradient(0deg, transparent 0%, #f8cc1d 100%, #f8cc1d 100%);
+border-radius: 8px;
+padding: 5px;
+box-sizing: border-box;
+height: 40px;
+
+}
+.search-bar div{
+    width: 810px;
+    border: none;
+   
+}

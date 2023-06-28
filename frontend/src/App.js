@@ -1,9 +1,10 @@
 import "./App.css";
+import Home from "./components/Home/Home.js"
 
 function App() {
   return (
     <>
-      <h1 className="App">BoilerPlate for MERN Project</h1>
+      <Home/>
     </>
   );
 }
