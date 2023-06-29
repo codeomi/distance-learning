@@ -1,0 +1,42 @@
+.section3 {
+  padding: 95px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #0e2345;
+}
+
+.white-heading-1 {
+  font-size: 55px;
+  margin-bottom: 25px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: #f1e6e6;
+}
+
+.white {
+  color: #f1e6e6;
+}
+
+.counselling-btn {
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+  font-size: 15px;
+  border-radius: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  font-family: "Inconsolata", monospace;
+  transition: all 0.3s linear;
+  color: #f8cc1d;
+  border: 0.5px solid #f8cc1d;
+}
+
+.counselling-btn:hover {
+  background-color: #f8cc1d;
+  color: black;
+  font-weight: 600;
+}/*# sourceMappingURL=section3.css.map */

@@ -1,0 +1,29 @@
+@import "../../styles/variables.scss";
+
+.section3 {
+  @include section();
+  background-color: $darkblue;
+}
+
+.white-heading-1 {
+  @include heading-1();
+  color: $dull-white;
+}
+
+.white {
+  color: $dull-white;
+}
+
+.counselling-btn {
+  @include btn-1();
+  font-family: $card-font;
+  transition: all 0.3s linear;
+  color: $yellow;
+  border: 0.5px solid $yellow;
+}
+
+.counselling-btn:hover {
+  background-color: $yellow;
+  color: black;
+  font-weight: 600;
+}

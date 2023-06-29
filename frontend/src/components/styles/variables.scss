@@ -59,3 +59,18 @@ $card-font:'Inconsolata', monospace;
     align-items: center;
 }
 
+
+@mixin btn-1(){
+    height: 45px;
+display: flex;
+justify-content: center;
+align-items: center;
+    padding: 0 25px;
+    font-size: 15px;
+    border-radius: 20px;
+    color: white;
+    background-color: $dull-black;
+    cursor: pointer;
+   
+}
+
