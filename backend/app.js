@@ -17,5 +17,6 @@ connectToDatabase()
 app.use('/api/examples', exampleRoutes);
 
 app.use(errrorMiddleware);
+console.log("Hi")
 
 module.exports = app;

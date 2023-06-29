@@ -21,7 +21,7 @@
   margin-bottom: 35px;
 }
 
-.heading-1 {
+.heading-2 {
   font-size: 50px;
   margin-bottom: 25px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
@@ -86,6 +86,6 @@
 }
 
 .search-bar div {
-  width: 810px;
+  width: 45vw;
   border: none;
 }/*# sourceMappingURL=section1.css.map */

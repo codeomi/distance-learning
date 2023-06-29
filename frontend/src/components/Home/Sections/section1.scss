@@ -1,4 +1,4 @@
-@import "../styles/variables.scss";
+@import "../../styles/variables.scss";
 
 .section1{
     @include section;
@@ -18,8 +18,8 @@
     margin-bottom: 35px;
 }
 
-.heading-1{
-    @include heading-1;
+.heading-2{
+    @include heading-2;
     text-align: center;
     color: $dull-white;
    
@@ -86,7 +86,8 @@ height: 40px;
 
 }
 .search-bar div{
-    width: 810px;
+
+    width: 45vw;
     border: none;
    
 }

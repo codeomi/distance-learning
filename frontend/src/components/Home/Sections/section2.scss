@@ -1,0 +1,41 @@
+@import "../../styles/variables.scss";
+
+.section2{
+    @include section();
+    
+}
+.section-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    .heading-1{
+        @include heading-1;
+        color: $dull-black;
+    }
+
+}
+
+
+.logo-container-wrapper{
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container-wrapper{
+    width: 80vw;
+    margin-top:150px ;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.dark-card{
+    background-color: rgba(0,0,0,0.5);
+}

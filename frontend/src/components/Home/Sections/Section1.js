@@ -7,7 +7,7 @@ const Section1 = () => {
       <div className="section1">
         <div className="section-container">
           <div className="section-description">
-            <div className="heading-1">Simpli Distance</div>
+            <div className="heading-2">Simpli Distance</div>
             <div className="para-container">
               India’s ONLY Dedicated Portal for Distance & Online Education!
               Explore the best Online and Distance learning MBA and BBA programs
@@ -20,7 +20,7 @@ const Section1 = () => {
                 <div className="toggle-btn">Search Courses</div>
             </div>
             <div className="search-bar">
-                <div type="text" placeholder="Enter your college name" />
+                <div type="input" placeholder="Enter your college name" />
             </div>
          </div>
         </div>

@@ -2,7 +2,7 @@ const College = require("../models/exampleModel.js");
 const ErrorHandler = require("../utils/ErrorHandler.js");
 
 //get all colleges
-exports.getCollege = async (req, res, next) => {
+exports.getColleges = async (req, res, next) => {
   const colleges = await College.find();
   if (!colleges) {
     return next(new ErrorHandler("No Colleges to show", 400));
@@ -48,4 +48,15 @@ exports.updataCollege = async (req, res, next) => {
   }
   await college.save();
   res.status(200).json({ success: true, college: college });
+};
+
+
+//delete college by id
+exports.deleteCollege = async (req, res, next) => {
+  const { id } = req.params.id;
+  const college = await College.findByIdAndDelete(id);
+  if (!college) {
+    return next(new ErrorHandler("Internal Server Error occured"), 400);
+  }
+  res.status(200).json({ success: true, message: "College deleted" });
 };

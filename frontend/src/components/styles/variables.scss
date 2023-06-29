@@ -2,14 +2,22 @@ $yellow:#f8cc1d;
 $darkblue:#0e2345;
 $white:#ffff;
 $dull-white:#f1e6e6;
+$dull-black:rgba(0,0,0,0.85);
 
 $heading-font: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
 "Lucida Sans", Arial, sans-serif;
 $para-font:'Varela Round', sans-serif;
+$card-font:'Inconsolata', monospace;
 
 //mixins
 
-@mixin heading-1 () {
+@mixin heading-3(){
+    font-size: 40px;
+    font-family: $heading-font;
+}
+
+
+@mixin heading-2 () {
     font-size: 50px;
     margin-bottom: 25px;
 
@@ -17,15 +25,22 @@ $para-font:'Varela Round', sans-serif;
 }
 
 
-@mixin heading-2 {
+@mixin heading-1 {
     font-size: 55px;
     margin-bottom: 25px;
     font-family: $heading-font;
+    
 }
 
 @mixin para (){
     font-size: 16px;
     font-family: $para-font;
+    line-height: 1.5;
+}
+
+@mixin para2 (){
+    font-size: 14px;
+    font-family: $card-font;
     line-height: 1.5;
 }
 
