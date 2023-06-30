@@ -1,0 +1,38 @@
+@import "../styles/variables.scss";
+
+.review-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 200px;
+    height: 300px;
+    margin: 0 50px ;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(0,0,0,0.1);
+    font-family: $card-font;
+
+.review-user-img{
+        width: 90px;
+        height: 100px;
+        position: absolute;
+        border-radius: 50%;
+        background-size: cover;
+        top: -44px;
+        right: -40px;
+        left: 72px;
+        object-position: top 30% ;
+    }
+
+    .review-para{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .review-author{
+        margin-top: 30px;
+        font-weight: 600;
+        text-align: center;
+    }
+}

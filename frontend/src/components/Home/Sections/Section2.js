@@ -2,13 +2,11 @@ import React from "react";
 import "./section2.scss";
 import Logo from "../../Cards/Logo";
 import Card1 from "../../Cards/Card1.js";
-import fire from "../../../assets/fire.svg"
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 import LanguageIcon from '@mui/icons-material/Language';
 import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
 
 const Section2 = () => {
-  const globe = <LanguageIcon/>
   return (
     <>
       <div className="section2">

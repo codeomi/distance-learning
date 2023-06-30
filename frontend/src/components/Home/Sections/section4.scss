@@ -1,0 +1,21 @@
+@import "../../styles/variables.scss";
+
+
+.section4{
+    @include section();
+
+}
+
+
+.heading-1{
+    @include heading-1;
+    color: $dull-black;
+}
+
+.review-container{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    
+
+}
