@@ -1,21 +1,23 @@
-import React from 'react'
-import "./home.scss"
-import Section1 from './Sections/Section1'
-import Section2 from './Sections/Section2.js'
-import Section3 from './Sections/Section3.js'
-import Section4 from './Sections/Section4.js'
+import React from "react";
+import "./home.scss";
+import Section1 from "./Sections/Section1";
+import Section2 from "./Sections/Section2.js";
+import Section3 from "./Sections/Section3.js";
+import Section4 from "./Sections/Section4.js";
+import Section5 from "./Sections/Section5.js";
 
 const Home = () => {
   return (
-   <>
-  <div className="home">
- <Section1 />
- <Section2 />
- <Section3 />
- <Section4 />
-  </div>
-   </>
-  )
-}
+    <>
+      <div className="home">
+        <Section1 />
+        <Section2 />
+        <Section3 />
+        <Section4 />
+        <Section5 />
+      </div>
+    </>
+  );
+};
 
-export default Home
+export default Home;

@@ -1,0 +1,48 @@
+@import "../../styles/variables.scss";
+
+.section5 {
+  @include section();
+}
+
+.newsletter-card-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscription-container {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscription-form {
+  margin-top: 20px;
+  width: 500px;
+  text-align: center;
+}
+
+.email-input {
+  border: none;
+  outline: none;
+  height: 30px;
+  background-color: $dull-white;
+  padding-left: 5px;
+  width: 250px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+box-sizing: border-box
+}
+.heading-3 {
+  @include heading-3();
+}
+
+.btn-2 {
+  @include btn-2();
+margin: auto;
+border-radius: 5px;
+  width: 210px;
+}

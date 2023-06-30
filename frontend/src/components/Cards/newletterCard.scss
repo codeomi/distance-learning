@@ -1,0 +1,27 @@
+@import "../styles/variables.scss";
+
+
+
+.newletter-card-container{
+    width: 268px;
+    // background-color: bisque;
+    margin: 0 20px;
+}
+.newsletter-card-img{   
+    height: 200px;
+    border-radius: 20px 20px 0 0;
+}
+
+
+.newsletter-heading{
+    @include heading-4();
+    margin: 5px ;
+}
+
+
+.newsletter-para{
+    font-family: $para-font;
+    margin: 5px;
+    font-size: 15px;
+}
+
