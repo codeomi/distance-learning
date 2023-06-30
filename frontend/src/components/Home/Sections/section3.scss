@@ -3,6 +3,9 @@
 .section3 {
   @include section();
   background-color: $darkblue;
+  -webkit-box-shadow: 0px 10px 26px 4px rgba(0,0,0,0.21);
+-moz-box-shadow: 0px 10px 26px 4px rgba(0,0,0,0.21);
+box-shadow: 0px 10px 26px 4px rgba(0,0,0,0.21);
 }
 
 .white-heading-1 {

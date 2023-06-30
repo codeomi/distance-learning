@@ -1,0 +1,21 @@
+.newletter-card-container {
+  width: 268px;
+  margin: 0 20px;
+}
+
+.newsletter-card-img {
+  height: 200px;
+  border-radius: 20px 20px 0 0;
+}
+
+.newsletter-heading {
+  font-size: 25px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  margin: 5px;
+}
+
+.newsletter-para {
+  font-family: "Varela Round", sans-serif;
+  margin: 5px;
+  font-size: 15px;
+}/*# sourceMappingURL=newletterCard.css.map */

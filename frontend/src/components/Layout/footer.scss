@@ -1,0 +1,62 @@
+@import "../styles/variables.scss";
+
+.footer {
+  background-color: $footer-bg;
+  color: white;
+  height: 250px;
+  width: 100%;
+  padding-bottom: 50px;
+  padding-left: 100px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.footer-container {
+  width: 80vw;
+  // margin: 30px 20px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer-link-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin: auto;
+  // transition: all 0.2s ;
+}
+
+.footer-container-para {
+  font-family: $para-font;
+  margin-bottom: 20px;
+  color: $navbar-para-color;
+  cursor: pointer;
+}
+.footer-container-heading {
+  font-family: $heading-font;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 28px;
+  margin-bottom: 30px;
+  color: $navbar-heading-color;
+  cursor: pointer;
+}
+.footer-container {
+  margin: 50px 80px;
+  display: flex;
+  flex-direction: row;
+  transition: all 0.2s;
+}
+
+.footer-container :hover {
+  color: $bright-yellow;
+}
+
+.sub-footer {
+  background-color: blue;
+  height: 100px;
+  margin: auto;
+  width: 100%;
+}
