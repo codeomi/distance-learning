@@ -1,0 +1,43 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.conatiner-1 {
+  height: 60px;
+  margin: 5px 10px 5px 60px;
+}
+
+.conatiner-1 > img {
+  height: inherit;
+}
+
+.conatiner-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 50px;
+  align-items: center;
+}
+
+.navbar-text {
+  font-size: 20px;
+  margin: 0 20px;
+  font-family: "Varela Round", sans-serif;
+  color: rgba(0, 0, 0, 0.8);
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.navbar-text:hover {
+  color: #f8cc1d;
+  background-color: #0e2345;
+}/*# sourceMappingURL=navbar.css.map */

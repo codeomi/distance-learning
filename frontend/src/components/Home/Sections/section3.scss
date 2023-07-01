@@ -3,14 +3,26 @@
 .section3 {
   @include section();
   background-color: $darkblue;
-  -webkit-box-shadow: 0px 10px 26px 4px rgba(0,0,0,0.21);
--moz-box-shadow: 0px 10px 26px 4px rgba(0,0,0,0.21);
-box-shadow: 0px 10px 26px 4px rgba(0,0,0,0.21);
+  -webkit-box-shadow: 0px 10px 26px 4px rgba(0, 0, 0, 0.21);
+  -moz-box-shadow: 0px 10px 26px 4px rgba(0, 0, 0, 0.21);
+  box-shadow: 0px 10px 26px 4px rgba(0, 0, 0, 0.21);
 }
 
 .white-heading-1 {
   @include heading-1();
   color: $dull-white;
+  animation: myAnim 1s ease 0s 1 normal forwards;
+}
+@keyframes myAnim {
+  0% {
+    opacity: 0;
+    transform: translateX(-250px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .white {

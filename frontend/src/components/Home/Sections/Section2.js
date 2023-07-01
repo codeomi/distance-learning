@@ -9,7 +9,7 @@ import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
 const Section2 = () => {
   return (
     <>
-      <div className="section2">
+      <div className="section2" data-aos="fade-right">
         <div className="section-container">
           <div className="section-description">
             <div className="heading-1">Featured Institutes</div>
@@ -18,7 +18,7 @@ const Section2 = () => {
               learning MBA and BBA courses in India.
             </div>
           </div>
-          <div className="logo-container-wrapper">
+          <div className="logo-container-wrapper" data-aos="fade-left">
             <Logo logo="" />
             <Logo logo="" />
             <Logo logo="" />

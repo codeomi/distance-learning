@@ -13,8 +13,19 @@
   margin-bottom: 25px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #f1e6e6;
+  animation: myAnim 1s ease 0s 1 normal forwards;
 }
 
+@keyframes myAnim {
+  0% {
+    opacity: 0;
+    transform: translateX(-250px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 .white {
   color: #f1e6e6;
 }

@@ -4,7 +4,7 @@ import "./newletterCard.scss"
 const NewsletterCard = () => {
   return (
    <>
-   <div className="newletter-card-container">
+   <div className="newletter-card-container"  data-aos="flip-left">
     <div className="img-container">
         <img className='newsletter-card-img' src="https://simplidistance.com/wp-content/uploads/2023/01/4-2.jpg" alt="" />
     </div>
