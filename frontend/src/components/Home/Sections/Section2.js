@@ -28,9 +28,9 @@ const Section2 = () => {
             <Logo logo="" />
           </div>
           <div className="container-wrapper">
-            <Card1 img={<LocalFireDepartmentIcon color="warning" fontSize="large"/>} title="1000+" para="Institutions Listed"/>
-            <Card1 className="dark-card"img={<LanguageIcon color="primary" fontSize="large"/>} title="1500+" para=" Courses"/>
-            <Card1 img={<WorkspacePremiumIcon fontSize="large"/>} title='800+' para="Certifications"/>
+            <Card1 img={<LocalFireDepartmentIcon color="warning" fontSize="large"/>} title="1000" para="Institutions Listed"/>
+            <Card1 className="dark-card"img={<LanguageIcon color="primary" fontSize="large"/>} title="1500" para=" Courses"/>
+            <Card1 img={<WorkspacePremiumIcon fontSize="large"/>} title='800' para="Certifications"/>
           </div>
         </div>
       </div>

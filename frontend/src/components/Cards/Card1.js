@@ -1,6 +1,7 @@
 import React from "react";
 import "./card1.scss";
 import fire from "../../assets/fire.svg";
+import CountUp from 'react-countup';
 
 const Card1 = ({img, title, para}) => {
   return (
@@ -9,7 +10,7 @@ const Card1 = ({img, title, para}) => {
         <div className="card-1-img">
           {img}
         </div>
-        <div className="heading-3">{title}</div>
+        <div className="heading-3"><CountUp duration={5} end={title} />+</div>
         <div className="card-para">{para}</div>
       </div>
     </>

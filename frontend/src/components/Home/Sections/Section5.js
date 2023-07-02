@@ -9,9 +9,9 @@ const Section5 = () => {
         <div className="section-container">
           <div className="heading-1">Newsletter</div>
           <div className="newsletter-card-wrapper">
-            <NewsletterCard />
-            <NewsletterCard />
-            <NewsletterCard />
+            <NewsletterCard heading="How online learning can power lifelong goals" />
+            <NewsletterCard heading="How online learning can power lifelong goals" />
+            <NewsletterCard heading="How online learning can power lifelong goals" />
           </div>
           <div className="subscription-container">
             <div className="heading-3">Stay Updated</div>
