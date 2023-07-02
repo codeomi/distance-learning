@@ -1,0 +1,45 @@
+.NewsLetterBigCard-ccontainer {
+  width: 365px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s linear;
+  border: 0.5px solid transparent;
+  border-radius: 10px;
+  padding: 10px 5px 5px 0;
+  margin: 30px 10px;
+}
+
+.NewsLetterBigCard-img {
+  width: 350px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 6px;
+}
+
+.NewsLetterBigCard-heading {
+  font-size: 25px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  text-align: start;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  margin-left: 6px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.NewsLetterBigCard-para {
+  font-family: "Varela Round", sans-serif;
+  margin-left: 6px;
+  font-size: 15px;
+  text-align: start;
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 5px;
+}
+
+.NewsLetterBigCard-ccontainer:hover {
+  border: 0.5px solid rgba(248, 204, 29, 0.4980392157);
+  box-shadow: -8px 10px 36px -23px rgba(0, 0, 0, 0.75);
+}/*# sourceMappingURL=newsLetterBigCard.css.map */
