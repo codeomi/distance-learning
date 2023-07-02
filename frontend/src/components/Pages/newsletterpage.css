@@ -1,0 +1,60 @@
+.blog {
+  margin-top: 45px;
+  margin-bottom: 35px;
+}
+
+.blog-container {
+  width: 900px;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.blog-img {
+  width: 900px;
+}
+
+.blog-heading {
+  font-size: 50px;
+  margin-bottom: 25px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.date {
+  font-size: 16px;
+  font-family: "Varela Round", sans-serif;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.blog-para {
+  font-size: 16px;
+  font-family: "Varela Round", sans-serif;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  margin: 25px 25px;
+  line-height: 2;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.blog-para-heading-text {
+  font-weight: 600;
+  margin: 25px 0;
+}
+
+.blog-link > svg {
+  font-size: 40px;
+  fill: linear-gradient(to right, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+}
+
+.insta-icon {
+  fill: linear-gradient(to right, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+}/*# sourceMappingURL=newsletterpage.css.map */
