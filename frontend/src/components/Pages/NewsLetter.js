@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./newsletterpage.scss";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Reply from "../Layout/Reply";
+import { useLocation } from "react-router-dom";
 
 const NewsLetter = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
   return (
     <>
     <div className="blog">
