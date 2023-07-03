@@ -1,0 +1,9 @@
+.clg-img {
+  width: 110%;
+}
+
+.college-page {
+  position: relative;
+  z-index: -1px;
+  top: -20px;
+}/*# sourceMappingURL=collegePage.css.map */

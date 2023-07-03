@@ -63,12 +63,16 @@
     border-radius: 140px;
     font-size: 19px;
     color: $white;
+    cursor: pointer;
+    color: #f8cc1d;
+    font-family: $para-font;
     
 }
 
 .toggle-btn-active{
     background-color: $white;
     color: $darkblue;
+    transition: all 0.8s ease;
 }
 
 .search-bar{
@@ -83,11 +87,38 @@ border-radius: 8px;
 padding: 5px;
 box-sizing: border-box;
 height: 40px;
+display: flex;
+flex-direction: row;
 
 }
-.search-bar div{
+.search-bar input{
 
-    width: 45vw;
+    width: 42vw;
     border: none;
+    outline: none;
+    height: 28px;
+    font-size: 15px;
+    font-family:  $para-font;
+    color: rgba(0,0,0,0.8);
+    position: relative;
+    font-weight: 500;
    
+}
+
+.search-icon-container{
+    height: inherit;
+}
+#search-icon{
+    // top: -20px;
+    // right: -20px;
+    z-index: -2%;
+    cursor: pointer;
+    margin-right: 5px;
+    margin-top: 4px;
+    color: #f8cc1d;
+    transition: 0.2s all;
+}
+
+#search-icon:hover{
+    color: $dull-black;
 }

@@ -1,7 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "./section1.scss";
+import SearchIcon from "@mui/icons-material/Search";
 
 const Section1 = () => {
+  const [isCollegeToggleActive, setIsCollegetoggleActive] = useState(true);
+  const [isCourseToggleActive, setIsCoursetoggleActive] = useState(false);
+
+  const toggleFunction = (toggleBtn) => {
+    if (toggleBtn === "college") {
+      setIsCollegetoggleActive(true);
+      setIsCoursetoggleActive(false);
+    } else if (toggleBtn === "course") {
+      setIsCoursetoggleActive(true);
+      setIsCollegetoggleActive(false);
+    }
+  };
   return (
     <>
       <div className="section1">
@@ -14,15 +27,41 @@ const Section1 = () => {
               by prestigious business schools in India.
             </div>
           </div>
-         <div className="search-container">
+          <div className="search-container">
             <div className="toggle-container">
-                <div className="toggle-btn toggle-btn-active">Search Colleges</div>
-                <div className="toggle-btn">Search Courses</div>
+              <div
+                className={`toggle-btn ${
+                  isCollegeToggleActive ? "toggle-btn-active" : ""
+                }`}
+                onClick={() => {
+                  toggleFunction("college");
+                }}
+              >
+                Search Colleges
+              </div>
+              <div
+                className={`toggle-btn ${
+                  isCourseToggleActive ? "toggle-btn-active" : ""
+                }`}
+                onClick={() => {
+                  toggleFunction("course");
+                }}
+              >
+                Search Courses
+              </div>
             </div>
             <div className="search-bar">
-                <div type="input" placeholder="Enter your college name" />
+              <input
+                type="text"
+                placeholder={`Enter your ${
+                  isCollegeToggleActive ? "College" : "Course"
+                } name`}
+              />
+              <div className="search-icon-container">
+                <SearchIcon id="search-icon"></SearchIcon>
+              </div>
             </div>
-         </div>
+          </div>
         </div>
       </div>
     </>

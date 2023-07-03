@@ -5,6 +5,7 @@ import Footer from "./components/Layout/Footer";
 import Navbar from "./components/Layout/Navbar.js";
 import NewsLetter from "./components/Pages/NewsLetter";
 import BlogsLayout from "./components/Pages/BlogsLayout";
+import CollegePage from "./components/Pages/College.js";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/newsletter/:heading" element={<NewsLetter />} />
           <Route exact path="/blogs" element={<BlogsLayout />} />
+          <Route exact path="/college" element={<CollegePage />} />
         </Routes>
         <Footer />
       </Router>
