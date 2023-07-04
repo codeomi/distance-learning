@@ -56,15 +56,16 @@ const Navbar = () => {
         <div className="mobile-display-menu">
         
         <MenuIcon id="menu-btn" onClick={toggleDrawer(true)} />
-          <Drawer
+          {/* <Drawer
             anchor="right"
             open={isDrawerOpen}
             onClose={toggleDrawer(false)}
+            id="drawer"
           >
             <List>
               <ListItem>Omkar</ListItem>
-            </List>
-          </Drawer>
+            </List> */}
+          {/* </Drawer> */}
         </div>
       </div>
     </>

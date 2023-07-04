@@ -43,12 +43,7 @@
   color: $navbar-heading-color;
   cursor: pointer;
 }
-.footer-container {
-  margin: 50px 80px;
-  display: flex;
-  flex-direction: row;
-  transition: all 0.2s;
-}
+
 
 .footer-container :hover {
   color: $bright-yellow;
@@ -59,4 +54,36 @@
   height: 100px;
   margin: auto;
   width: 100%;
+}
+
+
+@media only screen and (max-width:800px) {
+
+  .footer {
+    background-color: $footer-bg;
+    color: white;
+    height: fit-content;
+    width: 100%;
+    padding-bottom: 50px;
+    // padding-left: 100px;
+    overflow-x: hidden;
+    text-align: center;
+  }
+  
+  .footer-container {
+    width: fit-content;
+    margin: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: start;
+  }
+
+  .footer-link-container{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 20px 10px;
+  }
+  
 }
