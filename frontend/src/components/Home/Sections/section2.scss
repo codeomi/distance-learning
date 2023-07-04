@@ -39,3 +39,19 @@
 .dark-card{
     background-color: rgba(0,0,0,0.5);
 }
+
+@media only screen and (max-width:800px) {
+       .heading-1{
+        @include heading-1;
+        color: $dull-black;
+        text-align: center;
+    }
+    .logo-container-wrapper{
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+}

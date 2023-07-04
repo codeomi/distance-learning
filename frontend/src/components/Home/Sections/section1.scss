@@ -1,58 +1,166 @@
 @import "../../styles/variables.scss";
 
-.section1{
-    @include section;
-   background: url("../../../assets/home-image.jpg");
-   background-size: cover;
-   color: $white;
-    
+.section1 {
+  @include section;
+  background: url("../../../assets/home-image.jpg");
+  background-size: cover;
+  color: $white;
 }
 
-.section-container{
-    @include section-container;
-    width: 850px
-
+.section-container {
+  @include section-container;
+  width: 850px;
 }
 
-.section-description{
-    margin-bottom: 35px;
+.section-description {
+  margin-bottom: 35px;
 }
 
-.heading-2{
-    @include heading-2;
-    text-align: center;
-    color: $dull-white;
-   
-    
+.heading-2 {
+  @include heading-2;
+  text-align: center;
+  color: $dull-white;
 }
 
-.para-container{
-    @include para;
-    width: 800px;
-    text-align: center;
-
+.para-container {
+  @include para;
+  width: 800px;
+  text-align: center;
 }
 
-.search-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.search-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.toggle-container{
+.toggle-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 15px;
+}
+.toggle-container {
+  width: fit-content;
+  padding: 2px;
+  background-color: $darkblue;
+  border-radius: 140px;
+}
+.toggle-btn {
+  width: 335/2 px;
+  height: 57px;
+  padding: 0 15px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $darkblue;
+  border-radius: 140px;
+  font-size: 19px;
+  color: $white;
+  cursor: pointer;
+  color: #f8cc1d;
+  font-family: $para-font;
+}
+
+.toggle-btn-active {
+  background-color: $white;
+  color: $darkblue;
+  transition: all 0.8s ease;
+}
+
+.search-bar {
+  background: radial-gradient(
+        circle at 100% 100%,
+        #ffffff 0,
+        #ffffff 3px,
+        transparent 3px
+      )
+      0% 0%/8px 8px no-repeat,
+    radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 3px, transparent 3px)
+      100% 0%/8px 8px no-repeat,
+    radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 3px, transparent 3px)
+      0% 100%/8px 8px no-repeat,
+    radial-gradient(circle at 0 0, #ffffff 0, #ffffff 3px, transparent 3px) 100%
+      100%/8px 8px no-repeat,
+    linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 10px)
+      calc(100% - 16px) no-repeat,
+    linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 16px)
+      calc(100% - 10px) no-repeat,
+    linear-gradient(0deg, transparent 0%, #f8cc1d 100%, #f8cc1d 100%);
+  border-radius: 8px;
+  padding: 5px;
+  box-sizing: border-box;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+}
+.search-bar input {
+  width: 42vw;
+  border: none;
+  outline: none;
+  height: 28px;
+  font-size: 15px;
+  font-family: $para-font;
+  color: rgba(0, 0, 0, 0.8);
+  position: relative;
+  font-weight: 500;
+}
+
+.search-icon-container {
+  height: inherit;
+}
+#search-icon {
+  // top: -20px;
+  // right: -20px;
+  z-index: -2%;
+  cursor: pointer;
+  margin-right: 5px;
+  margin-top: 4px;
+  color: #f8cc1d;
+  transition: 0.2s all;
+}
+
+#search-icon:hover {
+  color: $dull-black;
+}
+
+@media only screen and (max-width: 768px) {
+  .section1 {
+    background: url("../../../assets/home-image.jpg");
+    padding: 50px 5px;
+    background-size: cover;
+    background-position: center;
+  }
+  .section-container {
+    width: 100%; // Adjust the width to fit the mobile screen
+
+    background-size: cover;
+    color: $white;
+  }
+
+  .heading-2 {
+    @include heading-3();
+  }
+
+  .para-container {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .toggle-container {
     display: flex;
     flex-direction: row;
     margin-bottom: 15px;
-}
-.toggle-container{
+  }
+  .toggle-container {
     width: fit-content;
     padding: 2px;
     background-color: $darkblue;
     border-radius: 140px;
-}
-.toggle-btn{
-    width: 335/2 px;
+  }
+  .toggle-btn {
+    width: 100px;
     height: 57px;
     padding: 0 15px;
     text-align: center;
@@ -66,121 +174,15 @@
     cursor: pointer;
     color: #f8cc1d;
     font-family: $para-font;
-    
-}
+  }
 
-.toggle-btn-active{
+  .toggle-btn-active {
     background-color: $white;
     color: $darkblue;
     transition: all 0.8s ease;
-}
-
-.search-bar{
-    background: radial-gradient(circle at 100% 100%, #ffffff 0, #ffffff 3px, transparent 3px) 0% 0%/8px 8px no-repeat,
-            radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 3px, transparent 3px) 100% 0%/8px 8px no-repeat,
-            radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 3px, transparent 3px) 0% 100%/8px 8px no-repeat,
-            radial-gradient(circle at 0 0, #ffffff 0, #ffffff 3px, transparent 3px) 100% 100%/8px 8px no-repeat,
-            linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 10px) calc(100% - 16px) no-repeat,
-            linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 16px) calc(100% - 10px) no-repeat,
-            linear-gradient(0deg, transparent 0%, #f8cc1d 100%, #f8cc1d 100%);
-border-radius: 8px;
-padding: 5px;
-box-sizing: border-box;
-height: 40px;
-display: flex;
-flex-direction: row;
-
-}
-.search-bar input{
-
-    width: 42vw;
-    border: none;
-    outline: none;
-    height: 28px;
-    font-size: 15px;
-    font-family:  $para-font;
-    color: rgba(0,0,0,0.8);
-    position: relative;
-    font-weight: 500;
-   
-}
-
-.search-icon-container{
-    height: inherit;
-}
-#search-icon{
-    // top: -20px;
-    // right: -20px;
-    z-index: -2%;
-    cursor: pointer;
-    margin-right: 5px;
-    margin-top: 4px;
-    color: #f8cc1d;
-    transition: 0.2s all;
-}
-
-#search-icon:hover{
-    color: $dull-black;
-}
-
-@media only screen and (max-width: 768px) {
-
-    .section1{
-         background: url("../../../assets/home-image.jpg");
-         padding: 50px 5px;
-    }
-    .section-container {
-      width: 100%; // Adjust the width to fit the mobile screen
-     
-      background-size: cover;
-      color: $white;
-    }
-  
-    .heading-2 {
-      @include heading-3();
-    }
-  
-    .para-container {
-      width: 100%;
-      font-size: 14px;
-    }
-
-    .toggle-container{
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 15px;
-    }
-    .toggle-container{
-        width: fit-content;
-        padding: 2px;
-        background-color: $darkblue;
-        border-radius: 140px;
-    }
-    .toggle-btn{
-        width: 100px;
-        height: 57px;
-        padding: 0 15px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: $darkblue;
-        border-radius: 140px;
-        font-size: 19px;
-        color: $white;
-        cursor: pointer;
-        color: #f8cc1d;
-        font-family: $para-font;
-        
-    }
-    
-    .toggle-btn-active{
-        background-color: $white;
-        color: $darkblue;
-        transition: all 0.8s ease;
-    }
-  
-    .search-bar input {
-      width: 80vw; // Adjust the input width for mobile
-    }
   }
+
+  .search-bar input {
+    width: 80vw; // Adjust the input width for mobile
+  }
+}
