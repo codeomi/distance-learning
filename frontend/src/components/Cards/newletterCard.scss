@@ -25,3 +25,26 @@
     font-size: 15px;
 }
 
+
+@media only screen and (max-width: 768px) {
+    .newletter-card-container{
+        width:100%;
+        // background-color: bisque;
+        margin: 40px 0;
+        color: $dull-black;
+        
+    }
+
+    .newsletter-card-img{   
+
+        height: 100%;
+        width: 100%;
+        border-radius: 20px 20px 0 0;
+    }
+    .newsletter-para{
+        font-family: $para-font;
+        margin: 5px;
+        font-size: 15px;
+    }
+    
+}

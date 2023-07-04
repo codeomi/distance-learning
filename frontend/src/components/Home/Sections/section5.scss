@@ -34,7 +34,7 @@
   width: 250px;
   border-radius: 5px;
   margin-bottom: 10px;
-box-sizing: border-box
+  box-sizing: border-box;
 }
 .heading-3 {
   @include heading-3();
@@ -42,15 +42,57 @@ box-sizing: border-box
 
 .btn-2 {
   @include btn-2();
-margin: auto;
-border-radius: 5px;
+  margin: auto;
+  border-radius: 5px;
   width: 210px;
   transition: all 0.3s linear;
 }
 
-.btn-2:hover{
+.btn-2:hover {
   background-color: $yellow;
   color: black;
   font-weight: 600;
 }
 
+@media only screen and (max-width: 768px) {
+  .newsletter-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .subscription-form {
+    margin-top: 20px;
+    width: 500px;
+    text-align: center;
+  }
+
+  .email-input {
+    border: none;
+    outline: none;
+    height: 50px;
+    background-color: $dull-white;
+    padding-left: 5px;
+    width: 300px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+  }
+
+  .btn-2 {
+    @include btn-2();
+    margin: auto;
+    border-radius: 5px;
+    width: 250px;
+    height: 50px;
+    
+    transition: all 0.3s linear;
+  }
+
+  .btn-2:hover {
+    background-color: $yellow;
+    color: black;
+    font-weight: 600;
+  }
+}

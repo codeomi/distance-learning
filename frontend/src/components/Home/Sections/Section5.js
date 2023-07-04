@@ -1,6 +1,7 @@
 import React from "react";
 import "./section5.scss";
 import NewsletterCard from "../../Cards/NewsletterCard";
+import { Input } from "@mui/material";
 
 const Section5 = () => {
   return (
@@ -16,12 +17,14 @@ const Section5 = () => {
           <div className="subscription-container">
             <div className="heading-3">Stay Updated</div>
             <div className="subscription-form">
-              <input
+              <Input
                 className="email-input"
                 type="email"
                 placeholder="johndoe@gmail.com"
                 typeof="input"
-              ></input>
+                label="Enter Email"
+                variant="standard"
+              ></Input>
               <div className="btn-2">Subscribe</div>
             </div>
           </div>
