@@ -1,58 +1,63 @@
 @import "../styles/variables.scss";
 
-.navbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  height: 70px;
-}
 
-.conatiner-1 {
-  height: 60px;
-  margin: 5px 10px 5px 60px;
-}
 
-.conatiner-1 > img {
-  height: inherit;
-}
+  .mobile-display-menu{
+    display: none;
+  }
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 70px;
+  }
+  
+  .conatiner-1 {
+    height: 60px;
+    margin: 5px 10px 5px 60px;
+  }
+  
+  .conatiner-1 > img {
+    height: inherit;
+  }
+  
+  .conatiner-2 {
+    display: flex;
+    flex-direction: row;
+    // background-color: aqua;
+    justify-content: space-between;
+    margin-right: 50px;
+    align-items: center;
+  }
+  
+  .navbar-text {
+    font-size: 20px;
+    margin: 0 20px;
+    font-family: $para-font;
+    color: rgba(0, 0, 0, 0.8);
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+  }
+  
+  .navbar-text:hover {
+    background: #52430a;
+    background: linear-gradient(to right, #52430a 27%, #8c7311 37%, #f8cc1d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .active {
+    background: #52430a;
+    background: linear-gradient(to right, #52430a 27%, #8c7311 37%, #f8cc1d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;}
 
-.conatiner-2 {
-  display: flex;
-  flex-direction: row;
-  // background-color: aqua;
-  justify-content: space-between;
-  margin-right: 50px;
-  align-items: center;
-}
-
-.navbar-text {
-  font-size: 20px;
-  margin: 0 20px;
-  font-family: $para-font;
-  color: rgba(0, 0, 0, 0.8);
-  height: 100%;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 15px;
-  cursor: pointer;
-  transition: all 0.2s linear;
-}
-
-.navbar-text:hover {
-  background: #52430a;
-  background: linear-gradient(to right, #52430a 27%, #8c7311 37%, #f8cc1d 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.active {
-  background: #52430a;
-  background: linear-gradient(to right, #52430a 27%, #8c7311 37%, #f8cc1d 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
 @media only screen and (max-width: 800px) {
   .navbar {
@@ -84,6 +89,7 @@
  
 
   .mobile-display-menu {
+    display: block;
     position: relative;
   }
 
