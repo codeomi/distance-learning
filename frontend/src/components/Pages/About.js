@@ -54,7 +54,7 @@ const About = () => {
               <div className="countdown-text">Institions Listed</div>
             </div>
             <div className="countdown-container ">
-              <div className="countdown yellow"><CountUp duration={3} end={500} />+</div>
+              <div className="countdown "><CountUp duration={3} end={500} />+</div>
               <div className="countdown-text">Courses</div>
             </div>
             <div className="countdown-container">

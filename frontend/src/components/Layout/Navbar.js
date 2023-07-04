@@ -1,9 +1,18 @@
 import React from "react";
 import "./navbar.scss";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
+
 
 const Navbar = () => {
   
+  const location = useLocation();
+
+  const isActiveLink = (link) => {
+    const { pathname } = location;
+    return pathname === link ? "active" : "";
+  };
+
+  console.log(location)
   return (
     <>
         <div className="navbar">
@@ -15,16 +24,16 @@ const Navbar = () => {
             />
           </Link>
           <div className="conatiner-2">
-            <Link to="/" className="navbar-text">
+            <Link to="/"  className={`navbar-text ${isActiveLink("/")}`}>
               Home
             </Link>
-            <Link to="/about" className="navbar-text">
+            <Link to="/about"  className={`navbar-text ${isActiveLink("/about")}`}>
               About
             </Link>
-            <Link to="/blogs" className="navbar-text">
+            <Link to="/blogs"  className={`navbar-text ${isActiveLink("/blogs")}`}>
               Blogs
             </Link>
-            <Link to="/contact" className="navbar-text">
+            <Link to="/contact"  className={`navbar-text ${isActiveLink("/contact")}`}>
               Contact
             </Link>
           </div>

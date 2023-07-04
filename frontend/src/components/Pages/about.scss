@@ -17,6 +17,7 @@
 .about-heading {
   @include heading-3();
   margin-bottom: 20px;
+  color: $dull-black;
 }
 
 .about-para {
@@ -44,12 +45,7 @@
   -webkit-text-fill-color: transparent;
 }
 
-.yellow {
-  background: #ffd01f;
-  background: linear-gradient(to right, #ffd01f 34%, #c29f18 42%, #4d400a 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+
 
 .countdown-text{
   font-family: $card-font;

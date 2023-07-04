@@ -44,6 +44,17 @@
 }
 
 .navbar-text:hover{
-    color: $yellow;
-    background-color: $darkblue;
+    background: #52430a;
+  background: linear-gradient(to right, #52430a 27%, #8c7311 37%, #f8cc1d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+
+}
+
+.active{
+    background: #52430a;
+    background: linear-gradient(to right, #52430a 27%, #8c7311 37%, #f8cc1d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
