@@ -1,21 +1,40 @@
 @import "../../styles/variables.scss";
 
+.section4 {
+  @include section();
+}
 
-.section4{
-    @include section();
+.heading-1 {
+  @include heading-1;
+  color: $dull-black;
+}
 
+.review-container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
 }
 
 
-.heading-1{
-    @include heading-1;
-    color: $dull-black;
-}
+@media only screen and (max-width: 768px) {
 
-.review-container{
-    margin-top: 50px;
-    display: flex;
-    flex-direction: row;
+    .section4{
+        overflow-x: visible;
+    }
+
+    .heading-1 {
+        @include heading-1;
+        color: $dull-black;
+        margin: 10px;
+      }
+
+    .review-container {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+ 
+      }
+
     
 
 }
