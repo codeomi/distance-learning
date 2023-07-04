@@ -102,3 +102,92 @@
   font-size: 18px;
   color: rgba(0, 0, 0, 0.8);
 }
+
+
+@media only screen and (max-width:800px){
+  .college-img-container {
+    position: relative;
+    color: $dull-white;
+  }
+  
+  .clg-img {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    filter: brightness(0.3);
+  }
+  
+  .college-logo {
+    width: 154px;
+    height: 148px;
+    margin: 0 20px;
+    position: static;
+    opacity: 2;
+  }
+  .college-name {
+    @include heading-3();
+    position: static;
+    font-weight: 600;
+    margin-top: 30px;
+  }
+  .college-heading-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 80px;
+    left: 15px;
+  }
+  
+  .college-address-container {
+    // background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    margin-top: 20px;
+  }
+  
+  .college-address {
+    font-family: $para-font;
+  }
+  
+  .college-heading-icons {
+    color: #ffd700;
+  }
+  
+  .college-address,
+  .ugc-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .college-info-blog-container {
+    text-align: center;
+    
+    width: 100%;
+  }
+  
+  .college-info-container {
+    width: 100%;
+  
+    margin: auto;
+  }
+  
+  .college-info-heading-container {
+    display: flex;
+    flex-direction: row;
+  
+    justify-content: start;
+    background-color: aliceblue;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
+    padding: 10px
+  }
+  .college-info{
+    margin: 15px 5px;
+  }
+  
+}

@@ -11,18 +11,6 @@
 .white-heading-1 {
   @include heading-1();
   color: $dull-white;
-  animation: myAnim 1s ease 0s 1 normal forwards;
-}
-@keyframes myAnim {
-  0% {
-    opacity: 0;
-    transform: translateX(-250px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
 }
 
 .white {
@@ -41,4 +29,15 @@
   background-color: $yellow;
   color: black;
   font-weight: 600;
+}
+
+@media only screen and (max-width: 800px) {
+
+  .white-heading-1 {
+    @include heading-1();
+    color: $dull-white;
+    text-align: center;
+    font-size: 40px;
+  }
+  
 }

@@ -1,54 +1,62 @@
 @import "../styles/variables.scss";
 
-.card1-container{
-    width: 200px;
-    // height: fit-content;
-    padding: 35px 40px 40px 40px;
-    margin: 0 67px 0 34px;
-    background-color:rgba(0,0,0,0.15);
-    border-radius: 0  40% 40% 40%;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.card1-container {
+  width: 200px;
+  // height: fit-content;
+  padding: 35px 40px 40px 40px;
+  margin: 0 67px 0 34px;
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 0 40% 40% 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-   .heading-3{
+  .heading-3 {
     margin-top: 30px;
     margin-bottom: 20px;
     font-size: 40px;
     font-weight: 500;
     background: #52430a;
-    background: linear-gradient(to right, #52430a 27%, #8c7311 37%, #f8cc1d 100%);
+    background: linear-gradient(
+      to right,
+      #52430a 27%,
+      #8c7311 37%,
+      #f8cc1d 100%
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-   }
+  }
 
-   .card-para{
+  .card-para {
     @include para2();
-   }
+  }
 }
 
-.dark-card{
-    background-color: rgba(0,0,0,.2);
+.dark-card {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
-.card-1-img{
-    width: 30px;
+.card-1-img {
+  width: 30px;
 }
 
-
-@media only screen and (max-width:800px) {
-
- 
-.card1-container{
+@media only screen and (max-width: 800px) {
+  .card1-container {
     width: 300px;
     // height: fit-content;
     padding: 35px 70px 40px 70px;
     margin: 20px auto;
-    background-color:rgba(0,0,0,0.15);
-    border-radius: 0  40% 40% 40%;
-    display:flex;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 0 40% 40% 40%;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;}
+    justify-content: center;
+  }
+
+  .card-para{
+    @include para2();
+    color: $dull-black;
+   }
 }
