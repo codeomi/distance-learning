@@ -6,6 +6,7 @@ import Navbar from "./components/Layout/Navbar.js";
 import NewsLetter from "./components/Pages/NewsLetter";
 import BlogsLayout from "./components/Pages/BlogsLayout";
 import CollegePage from "./components/Pages/College.js";
+import About from "./components/Pages/About";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route exact path="/newsletter/:heading" element={<NewsLetter />} />
           <Route exact path="/blogs" element={<BlogsLayout />} />
           <Route exact path="/college" element={<CollegePage />} />
+          <Route exact path="/about" element={<About />} />
         </Routes>
         <Footer />
       </Router>
