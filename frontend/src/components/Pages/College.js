@@ -1,13 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Tilt, { Axis } from "react-parallax-tilt";
 import "./collegePage.scss";
 import Image from "../../assets/university-education-logo-design-template-free-vector.jpg";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import { Handshake, Place, School, Stars } from "@mui/icons-material";
 import TextSnippetIcon from "@mui/icons-material/TextSnippet";
+import { useLocation } from "react-router-dom";
 
 const College = () => {
-  const [axisEnabled, toggleAxis] = useState("y");
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
   return (
     <>
       {" "}
