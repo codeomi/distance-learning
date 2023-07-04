@@ -45,4 +45,12 @@ box-sizing: border-box
 margin: auto;
 border-radius: 5px;
   width: 210px;
+  transition: all 0.3s linear;
 }
+
+.btn-2:hover{
+  background-color: $yellow;
+  color: black;
+  font-weight: 600;
+}
+
