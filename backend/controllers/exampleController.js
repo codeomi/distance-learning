@@ -68,20 +68,52 @@ exports.addCollegeData = (req, res, next) => {
 exports.deleteCollege = (req, res, next) => {
   const { email } = req.body;
 
-  const qr1 = `SELECT * FROM college_details WHERE email=?`;
-  const qr2 = `DELETE FROM college_details WHERE email=?`;
+  const qr1 = `SELECT * FROM college_details WHERE email=?`; //Finding the college
+  const qr2 = `DELETE FROM college_details WHERE email=?`; //Deleting the college
 
   pool.query(qr1, [email], (err, results) => {
-    if (results.length===0){
-      return next ( new ErrorHandler("College does not exist",404))
-    }
-    else {
-      pool.query(qr2,[email],(err,results)=>{
-        if(err) throw err
-        else{
-          return next(new ErrorHandler("college deleted successfully",200))
+    if (results.length === 0) {
+      return next(new ErrorHandler("College does not exist", 404));
+    } else {
+      pool.query(qr2, [email], (err, results) => {
+        if (err) throw err;
+        else {
+          return next(new ErrorHandler("college deleted successfully", 200));
         }
-      })
+      });
+    }
+  });
+};
+
+//Update a row from table
+exports.updateCollege = (req, res, next) => {
+  const email = req.params.email;
+  console.log(email);
+  const { name, collegeDetails, collelgeLogo, collegeImage, collegeCourses } =
+    req.body;
+
+  const qr1 = `SELECT * FROM college_details WHERE email=?`; //Finding the college
+  const qr2 = `UPDATE college_details SET college_name=?, college_details=?, college_logo=?, college_image=?, college_courses=?  WHERE email=?`; //updating the college
+
+  pool.query(qr1, [email], (err, results) => {
+    if (err) {
+      console.error(err);
+      return next(new ErrorHandler("Error querying college details", 500));
+    }
+
+    if (results.length === 0) {
+      return next(new ErrorHandler("College does not exist", 404));
+    } else {
+      pool.query(
+        qr2,
+        [name, collegeDetails, collelgeLogo, collegeImage, collegeCourses,email],
+        (err, results) => {
+          if (err) throw err;
+          else {
+            return res.send({success:"true",results});
+          }
+        }
+      );
     }
   });
 };
