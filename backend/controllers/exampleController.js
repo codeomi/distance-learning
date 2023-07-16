@@ -32,12 +32,14 @@ exports.addCollegeData = (req, res, next) => {
     collegeCourses,
   } = req.body;
   const qr1 = `SELECT * FROM college_details WHERE email=? or college_name=?`;
+  //querry to check if data already exist or not
   pool.query(qr1, [email, name], (err, results) => {
     if (err) throw err;
     else {
       if (results.length > 0) {
         return next(new ErrorHandler("College already exit in database", 400));
       } else {
+        //query to add data since it does not exist
         const qr2 = ` INSERT INTO college_details(college_name, email, college_details, college_logo, college_image, college_courses)
         VALUES (?, ?, ?, ?, ?, ?)`;
         pool.query(
@@ -50,14 +52,36 @@ exports.addCollegeData = (req, res, next) => {
             collegeImage,
             collegeCourses,
           ],
-          (err, results) => {
+          (err, results, table) => {
             if (err) throw err;
             else {
-              res.send({ success: "true", results });
+              res.send({ success: "true", results, table });
             }
           }
         );
       }
+    }
+  });
+};
+
+//Delete a row from table
+exports.deleteCollege = (req, res, next) => {
+  const { email } = req.body;
+
+  const qr1 = `SELECT * FROM college_details WHERE email=?`;
+  const qr2 = `DELETE FROM college_details WHERE email=?`;
+
+  pool.query(qr1, [email], (err, results) => {
+    if (results.length===0){
+      return next ( new ErrorHandler("College does not exist",404))
+    }
+    else {
+      pool.query(qr2,[email],(err,results)=>{
+        if(err) throw err
+        else{
+          return next(new ErrorHandler("college deleted successfully",200))
+        }
+      })
     }
   });
 };
