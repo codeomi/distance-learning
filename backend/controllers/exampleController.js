@@ -1,62 +1,63 @@
-const College = require("../models/exampleModel.js");
 const ErrorHandler = require("../utils/ErrorHandler.js");
+const mysql = require("mysql");
+
+const pool = mysql.createConnection({
+  port: 3306,
+  host: "localhost",
+  user: "sqluser",
+  password: "password",
+  database: "simpli_distance",
+});
 
 //get all colleges
-exports.getColleges = async (req, res, next) => {
-  const colleges = await College.find();
-  if (!colleges) {
-    return next(new ErrorHandler("No Colleges to show", 400));
-  }
+exports.getColleges = (req, res, next) => {
+  pool.query("SELECT * FROM college_details", (error, results) => {
+    if (error) {
+      console.error(error);
+      return next(new ErrorHandler("Error fetching colleges", 500));
+    }
 
-  res.status(200).json({ success: true, colleges: colleges });
+    res.send({ success: "true", results });
+  });
 };
 
-//create college
-exports.createCollege = async (req, res) => {
-  const college = await College.create(req.body);
-  if (!college) {
-    return next(new ErrorHandler("Internal Server Error occured"), 400);
-  }
-  res.status(200).json({ success: true, college: college });
-};
-
-//get single college by id
-exports.getCollegeById = async (req, res, next) => {
-  const { id } = req.params.id;
-  const college = await College.findById(id);
-  if (!college) {
-    return next(new ErrorHandler("Internal Server Error occured"), 400);
-  }
-  res.status(200).json({ success: true, college: college });
-};
-
-//update College by id
-exports.updataCollege = async (req, res, next) => {
-  const { name, description, logo, courses, collegePhoto } = req.body;
-  const newData = {
-    name: name,
-    description: description,
-    logo: logo,
-    courses: courses,
-    collegePhoto: collegePhoto,
-  };
-  const college = await College.findByIdAndUpdate(name, req.params.id);
-  if (!college) {
-    return next(
-      new ErrorHandler(`College with ${req.params.id} does not exit`, 400)
-    );
-  }
-  await college.save();
-  res.status(200).json({ success: true, college: college });
-};
-
-
-//delete college by id
-exports.deleteCollege = async (req, res, next) => {
-  const { id } = req.params.id;
-  const college = await College.findByIdAndDelete(id);
-  if (!college) {
-    return next(new ErrorHandler("Internal Server Error occured"), 400);
-  }
-  res.status(200).json({ success: true, message: "College deleted" });
+//add data
+exports.addCollegeData = (req, res, next) => {
+  const {
+    name,
+    email,
+    collegeDetails,
+    collelgeLogo,
+    collegeImage,
+    collegeCourses,
+  } = req.body;
+  const qr1 = `SELECT * FROM college_details WHERE email=? or college_name=?`;
+  pool.query(qr1, [email, name], (err, results) => {
+    if (err) throw err;
+    else {
+      if (results.length > 0) {
+        return next(new ErrorHandler("College already exit in database", 400));
+      } else {
+        const qr2 = ` INSERT INTO college_details(college_name, email, college_details, college_logo, college_image, college_courses)
+        VALUES (?, ?, ?, ?, ?, ?)`;
+        pool.query(
+          qr2,
+          [
+            name,
+            email,
+            collegeDetails,
+            collelgeLogo,
+            collegeImage,
+            collegeCourses,
+          ],
+          (err, results) => {
+            if (err) throw err;
+            else {
+              res.send({ success: "true", results });
+            }
+          }
+        );
+      }
+    }
+  });
 };

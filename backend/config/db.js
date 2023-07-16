@@ -1,13 +1,17 @@
-const mongoose = require("mongoose");
+const mysql = require("mysql");
 
-// MongoDB connection URL
-const mongoURI = "mongodb+srv://omkar7890kudale:omkarkudale@oruphones.0cbzmf6.mongodb.net/oruPhones";
+const pool = mysql.createConnection({
+  port: process.env.DB_PORT,
+  host: process.env.DB_HOST,
+  user: "sqluser",
+  password: "password",
+  database: process.env.DB_DATABASE,
+});
 
-// Connect to MongoDB
-const connectToDatabase = () => {
-  mongoose.connect(mongoURI).then((data) => {
-    console.log(`mongoDb connected with server ${data.connection.host}`);
-  });
-};
 
-module.exports = connectToDatabase;
+pool.connect((err) => {
+  if (err) throw err;
+  console.log("Connection created..!!");
+});
+
+exports.module = pool;
